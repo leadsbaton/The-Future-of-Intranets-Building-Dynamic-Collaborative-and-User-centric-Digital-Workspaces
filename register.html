@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Pharma Launches Don’t Fail Because of Strategy.
-        They Fail Because of Documents.</title>
+    <title>Stop Maintaining. Start Transforming: IT's New
+        Role in Employee Experience</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Tailwind CSS -->
@@ -38,8 +38,8 @@
     <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-16">
         <section class="bg-white rounded-2xl shadow-card p-6 sm:p-10">
             <h1 class="text-2xl font-semibold mb-4">
-                Pharma Launches Don’t Fail Because of Strategy. They Fail Because of Documents.
-            </h1>
+                    Pharma Launches Don’t Fail Because of Strategy. They Fail Because of Documents.
+                </h1>
             <p class="mt-2 text-sm sm:text-base text-gray-600">
                 <strong>Thank you for your interest in KMWorld White Papers!</strong>
             </p>
@@ -135,9 +135,6 @@
         const EMAIL_SERVICE_ID = "service_z09fuxl";
         const EMAIL_TEMPLATE_ID = "template_sgg6gwp";
 
-        // Set this to the actual PDF (direct file) if you have it:
-        // Example below points to your GitHub Pages path; update if needed.
-        const PDF_URL = "https://leadsbaton.github.io/Pharma-Launches-Dont-Fail-Because-of-Strategy-They-Fail-Because-of-Documents/assets/pdf/Pharma-Launches-Dont-Fail-Because-of-Strategy-They-Fail-Because-of-Documents.pdf";
         /* ---------------------------------------------------------
            Boot
         --------------------------------------------------------- */
@@ -225,15 +222,7 @@
                 setLoading(true);
                 await emailjs.send(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, payload);
 
-                showToast("Success! Your download will start now.");
-
-                // Direct download instead of web view
-                const link = document.createElement('a');
-                link.href = PDF_URL;
-                link.download = PDF_URL.split('/').pop() || 'ebook.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                showToast("Thank you! Your submission has been received.");
 
                 //clear data
                 form.reset();
